@@ -1,0 +1,20 @@
+<h1>Customers list</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Company name</th>
+      <th scope="col">FirstName</th>
+      <th scope="col">LastName</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr **ngFor="let customer of customers$">
+      <th scope="row">1</th>
+      <td>{{ customer.id }}</td>
+      <td>{{ customer.company }}</td>
+      <td>{{ customer.firstname }}</td>
+      <td>{{ customer.lastname }}</td>
+    </tr>
+  </tbody>
+</table>
