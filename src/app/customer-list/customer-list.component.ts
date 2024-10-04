@@ -15,10 +15,15 @@ import { RouterLink } from '@angular/router';
 export class CustomerListComponent implements OnInit{
   customers$!: Observable<Customer[]>
 
+
   constructor(private customerService: CustomerService) {}
 
   ngOnInit(): void {
     this.customers$=this.customerService.getList()
 }
+  deleteCustomer(id:number){
+    console.log(id+"")
+    return this.customerService.delete(id+"")
+  }
 
 }

@@ -31,6 +31,7 @@ export class CustomerService {
   }
 
   delete(id:string):Observable<Customer>{
-    return this.http.delete<Customer>(`${this.apiUrl}/delete/${id}`);
+    console.log(`${this.apiUrl}/customer/delete/${id}`)
+    return this.http.delete<Customer>(`${this.apiUrl}/customer/delete/${id}`);
   }
 }

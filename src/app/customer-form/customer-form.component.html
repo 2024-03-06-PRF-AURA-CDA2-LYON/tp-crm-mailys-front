@@ -1,0 +1,21 @@
+<form #customerForm="ngForm" (ngSubmit)="onSubmit()">
+  <div>
+    <!-- lastname -->
+    <div [hidden]="lastname.valid || lastname.pristine" class="alert alert-danger">
+      Lastname is required
+    </div>
+    <label>Lastname:</label>
+    <input  class="form-control" type="text" id="lastname" name="lastname" [(ngModel)]="customer.lastname" required
+      #lastname="ngModel">
+  </div>
+  <!-- firstname -->
+  @if(first_name.invalid && first_name.touched){
+    <div class="alert alert-danger">
+      <p>Le nom d'utilisateur est requis</p>
+    </div>
+  }
+  <label>Firstname:</label>
+  <input  class="form-control" type="text" id="firstname" name="first_name" [(ngModel)]="first_name" required
+    #lastname="ngModel" [class.is-invalid]="firstname.invalid && lastname.touched" [class.is-valid="lastname.valid && lastname.touched"]/>
+</div>
+</form>
