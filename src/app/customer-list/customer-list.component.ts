@@ -3,11 +3,12 @@ import { Observable } from 'rxjs';
 import { Customer } from '../Customer.type';
 import { CustomerService } from '../customer.service';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-customer-list',
   standalone: true,
-  imports: [ CommonModule],
+  imports: [ CommonModule,RouterLink],
   templateUrl: './customer-list.component.html',
   styleUrl: './customer-list.component.css'
 })

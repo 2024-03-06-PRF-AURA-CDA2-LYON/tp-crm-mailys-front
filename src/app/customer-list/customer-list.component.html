@@ -6,16 +6,19 @@
       <th scope="col">Company name</th>
       <th scope="col">FirstName</th>
       <th scope="col">LastName</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+
     </tr>
   </thead>
   <tbody>
-    i
     <tr *ngFor="let customer of customers$ | async">
-      <th scope="row">1</th>
       <td>{{ customer.id }}</td>
       <td>{{ customer.company_name }}</td>
       <td>{{ customer.first_name }}</td>
       <td>{{ customer.last_name }}</td>
+      <td><a [routerLink]="['/customers', customer.id]"><i class="fa-solid fa-eye"></i></a></td>
     </tr>
   </tbody>
 </table>
