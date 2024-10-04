@@ -9,12 +9,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr **ngFor="let customer of customers$">
+    i
+    <tr *ngFor="let customer of customers$ | async">
       <th scope="row">1</th>
       <td>{{ customer.id }}</td>
-      <td>{{ customer.company }}</td>
-      <td>{{ customer.firstname }}</td>
-      <td>{{ customer.lastname }}</td>
+      <td>{{ customer.company_name }}</td>
+      <td>{{ customer.first_name }}</td>
+      <td>{{ customer.last_name }}</td>
     </tr>
   </tbody>
 </table>
